@@ -1,3 +1,5 @@
+@use "../../../styles/breakpoints.scss" as *;
+
 .button {
   border: none;
   background-color: transparent;
@@ -5,7 +7,7 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: var(--breakpoint-sm)) {
+@media only screen and (min-width: $breakpoint-sm) {
   .button { 
     display: none;
   }

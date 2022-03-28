@@ -1,0 +1,19 @@
+.scroll {
+  // position: absolute;
+  margin-top: 3rem;
+  transform: 
+    rotateZ(90deg);
+    // translate(-6rem, -4.5rem);
+  left: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  animation: scroll 3s ease-out infinite;
+}
+
+@keyframes scroll {
+  0%    { bottom: 0 }
+  60%  { bottom: 1rem }
+  100%  { bottom: 0 }
+}

@@ -1,0 +1,22 @@
+.button {
+  cursor: pointer;
+  padding-inline: 1rem;
+}
+
+.primaryButton {
+  background-color: teal;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: none;
+  outline: 1px solid teal;
+  color: teal;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
