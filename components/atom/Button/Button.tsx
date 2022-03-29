@@ -1,34 +1,29 @@
-import { MouseEventHandler, ReactNode } from "react";
-import styles from "./Button.module.scss";
+import { FC, HTMLAttributes, MouseEventHandler } from "react";
+import styled from "styled-components";
 
-interface ButtonProps {
-  color?: string;
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   handleClick?: MouseEventHandler;
-  children: ReactNode;
   variant: "primary" | "secondary";
 }
 
-export const Button = ({
-  color,
-  handleClick,
-  children,
-  variant,
-}: ButtonProps) => {
-  switch (variant) {
-    case "primary":
-      return (
-        <button onClick={handleClick} className={styles.primaryButton}>
-          {children}
-        </button>
-      );
-    case "secondary":
-      return (
-        <button onClick={handleClick} className={styles.secondaryButton}>
-          {children}
-        </button>
-      );
-    default:
-      return;
-  }
-  return <button onClick={handleClick}>{children}</button>;
+export const Button: FC<ButtonProps> = ({ handleClick, variant, ...props }) => {
+  return (
+    <StyledButton onClick={handleClick} variant={variant}>
+      {props.children}
+    </StyledButton>
+  );
 };
+
+export const StyledButton = styled.button<ButtonProps>`
+  cursor: pointer;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+
+  padding: 0.5rem 1rem;
+
+  border: ${(props) =>
+    props.variant == "primary" ? "none" : "1px solid teal"};
+  background-color: ${(props) =>
+    props.variant == "primary" ? "teal" : "transparent"};
+  color: ${(props) => (props.variant == "primary" ? "white" : "teal")};
+`;

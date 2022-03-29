@@ -6,6 +6,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:jsx-a11y/strict"
@@ -24,6 +25,11 @@
     "jsx-a11y",
     "@typescript-eslint"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
