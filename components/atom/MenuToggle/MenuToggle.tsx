@@ -22,7 +22,7 @@ export const MenuToggle = ({
   return (
     <button
       id="mobile-nav-toggle"
-      className={styles.button + ""}
+      className={styles.button}
       aria-controls={ariaControls}
       aria-haspopup="true"
       onClick={(e) => handleClick(e)}

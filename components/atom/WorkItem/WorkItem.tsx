@@ -49,7 +49,14 @@ export const WorkItem = (props: Props) => {
         <p style={{ fontWeight: "700", fontSize: "1.2rem" }}>See detail</p>
         {props.repo && (
           <Link href={props.repo} passHref>
-            <a target="_blank" className={styles.repoLink}>Repo</a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className={styles.repoLink}
+              href={props.repo}
+            >
+              Repo
+            </a>
           </Link>
         )}
       </div>

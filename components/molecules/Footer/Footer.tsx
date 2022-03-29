@@ -6,7 +6,7 @@ import { SiFrontendmentor } from "react-icons/si";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <hr className={styles.divider}/>
+      <hr className={styles.divider} />
       <div className={styles.socialLinkGroup}>
         <SocialLink href="https://github.com/d-abiyoga">
           <FaGithub size={32} />

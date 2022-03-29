@@ -1,8 +1,6 @@
-// import Section from "../../atom/Section";
 import ButtonLink from "../../atom/ButtonLink";
-// import Heading from "../../atom/Heading";
 
-export const ContactSection = (props: {}) => {
+export const ContactSection = () => {
   return (
     <section id="contact">
       <h2 className={"sr-only"}>Contact Me</h2>

@@ -1,15 +1,18 @@
 import Link, { LinkProps } from "next/link";
-import { ReactNode } from "react";
+import { AnchorHTMLAttributes } from "react";
 import styles from "./SocialLink.module.scss";
 
-interface Props extends LinkProps {
-  children: ReactNode;
-}
+type LinkPropType = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export const SocialLink = (props: Props) => {
+export const SocialLink = (props: LinkPropType) => {
   return (
     <Link href={props.href} passHref>
-      <a target="_blank" className={styles.link}>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={props.href}
+        className={styles.link}
+      >
         {props.children}
       </a>
     </Link>

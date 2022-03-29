@@ -1,6 +1,6 @@
 import React from "react";
 
-const idxStockApp = (props: {}) => {
+const idxStockApp = () => {
   return <div>idxStockApp</div>;
 };
 
