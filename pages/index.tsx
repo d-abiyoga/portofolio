@@ -5,6 +5,7 @@ import Layout from "../components/molecules/Layout/";
 import WorkSection from "../components/molecules/WorkSection";
 import AboutSection from "../components/molecules/AboutSection";
 import ContactSection from "../components/molecules/ContactSection";
+import Footer from "../components/molecules/Footer/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         <WorkSection />
         <AboutSection />
         <ContactSection />
+        <Footer />
       </Layout>
     </>
   );

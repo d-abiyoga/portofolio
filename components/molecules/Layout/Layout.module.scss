@@ -1,3 +1,7 @@
 .main {
-  padding: 0 clamp(1rem, 10%, 6rem);
+  padding: 0 clamp(1rem, 12%, 20rem);
+
+  /* & > * {
+    max-width: 1200px;
+  } */
 }

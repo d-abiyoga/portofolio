@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+  gap: 1rem;
+}
+
+.divider {
+  border: 1px solid darkturquoise;
+}
+
+.socialLinkGroup {
+  display: flex;
+  gap: 1rem;
+}

@@ -10,6 +10,8 @@ interface IWorkData {
   type: "client work" | "personal project" | "coding challenge";
   role: string[];
   year: number;
+  link: string;
+  repo?: string;
 }
 
 export const WorkSection = () => {
@@ -28,6 +30,8 @@ export const WorkSection = () => {
       type: "personal project",
       role: ["Design", "Frontend", "Backend"],
       year: 2022,
+      link: "/work/idx-stock-app",
+      repo: "https://github.com/d-abiyoga/idx-stock-app",
     },
     {
       title: "Fleet management",
@@ -37,6 +41,7 @@ export const WorkSection = () => {
       type: "client work",
       role: ["Design", "Frontend", "Backend"],
       year: 2022,
+      link: "/work/fleet-management",
     },
     {
       title: "Ecommerce product page",
@@ -46,6 +51,17 @@ export const WorkSection = () => {
       type: "coding challenge",
       role: ["Frontend"],
       year: 2021,
+      link: "/work/ecommerce-product-page",
+    },
+    {
+      title: "landing page",
+      description:
+        "This is part of frontendmentor challenge. In this challenge I implement challenge as ...",
+      technology: ["HTML", "SCSS"],
+      type: "coding challenge",
+      role: ["Frontend"],
+      year: 2021,
+      link: "/work/ecommerce-product-page",
     },
   ];
 
@@ -63,6 +79,8 @@ export const WorkSection = () => {
               type={work.type}
               role={work.role}
               year={work.year}
+              link={work.link}
+              repo={work.repo}
             />
           </li>
         ))}

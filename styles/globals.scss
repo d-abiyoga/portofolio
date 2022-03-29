@@ -14,6 +14,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 * {
@@ -33,10 +34,4 @@ a {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
-}
-
-h2 {
-  color: teal;
-  padding-bottom: 1rem;
-
 }

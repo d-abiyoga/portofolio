@@ -8,10 +8,15 @@
   align-items: center;
   justify-content: space-between;
   background-color: $main-color;
-  padding: 0 clamp(1rem, 10%, 6rem);
+  padding: 0 clamp(1rem, 12%, 20rem);
+
   position: fixed;
-  box-shadow: teal 1;
-  box-shadow: teal 0px 1px 20px -8px;
+  box-shadow: $primary 0px 1px 20px -8px;
+  z-index: 100;
+
+  & > * {
+    max-width: 1200px;
+  }
 }
 
 .logo {
@@ -37,13 +42,13 @@
 .header a {
   text-decoration: none;
   font-size: 1.25rem;
-  color: #fcb8d2;
+  color: $grey-200;
   position: relative;
 }
 
 .header a:hover,
 .header a:active {
-  color: $main-color;
+  color: $white-100;
 }
 
 /* Animation */
@@ -55,6 +60,7 @@
   position: absolute;
   bottom: -0.2em;
   left: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .header a:hover::after {

@@ -6,16 +6,18 @@ import Section from "../../atom/Section";
 export const Hero = () => {
   return (
     <Section id="hero">
-      <div className={styles.right}>
+      <div className={styles.top}>
         <div className={styles.avatarWrapper}>
           <Avatar viewBox="0 50 375 375" />
         </div>
       </div>
       <div className={styles.descriptions}>
         <h1 className={styles.title}>
-          Hi. I am Dimas Abiyoga.
+          Hi. I&apos;m Dimas.
           <br />
-          <span className={styles.emphasis}>Full stack developer </span>
+          <span className={styles.emphasis}>
+            Full stack developer <br />
+          </span>
           based in Indonesia.
         </h1>
 

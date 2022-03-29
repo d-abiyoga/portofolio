@@ -6,10 +6,14 @@ type ButtonLinkType = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 
 interface AnchorProps extends ButtonLinkType {
   color?: string;
-  variant: "primary" | "secondary";
+  variant?: "primary" | "secondary";
 }
 
-export const ButtonLink = ({ color, variant, ...props }: AnchorProps) => {
+export const ButtonLink = ({
+  color,
+  variant = "primary",
+  ...props
+}: AnchorProps) => {
   switch (variant) {
     case "primary":
       return (

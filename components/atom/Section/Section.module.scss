@@ -1,3 +1,5 @@
+@use "../../../styles/breakpoints.scss" as *;
+
 .container {
   min-height: 100vh;
   padding-top: 5rem;
@@ -11,4 +13,25 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+}
+
+.about > *:where(:not(:first-child)) {
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+  .hero {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+  .hero {
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 }
