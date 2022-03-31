@@ -1,23 +1,23 @@
-import styles from "./Footer.module.scss";
-import SocialLink from "../../atom/SocialLink";
-import { FaGithub } from "react-icons/fa";
-import { SiFrontendmentor } from "react-icons/si";
+import styled from "styled-components";
+import colors from "../../../styles/colors";
+import pagePadding from "../../../styles/utils/pagePadding.styled";
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <hr className={styles.divider} />
-      <div className={styles.socialLinkGroup}>
-        <SocialLink href="https://github.com/d-abiyoga">
-          <FaGithub size={32} />
-        </SocialLink>
-        <SocialLink href="https://www.frontendmentor.io/profile/d-abiyoga">
-          <SiFrontendmentor size={32} />
-        </SocialLink>
-      </div>
-      © 2022 Dimas Abiyoga. All Rights Reserved.
-    </footer>
+    <StyledFooter>© 2022 Dimas Abiyoga. All Rights Reserved.</StyledFooter>
   );
 };
 
-export default Footer;
+const StyledFooter = styled.footer`
+  ${pagePadding};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+  gap: 1rem;
+  height: 4rem;
+`;
+
+const Divider = styled.hr`
+  border: 1px solid ${colors.primary.main};
+`;

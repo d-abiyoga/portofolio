@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Hero from "../components/molecules/Hero";
-import Layout from "../components/molecules/Layout/";
-import WorkSection from "../components/molecules/WorkSection";
-import AboutSection from "../components/molecules/AboutSection";
-import ContactSection from "../components/molecules/ContactSection";
-import Footer from "../components/molecules/Footer/Footer";
+import HeroSection from "../components/organism/HeroSection";
+import Layout from "../components/molecules/Layout";
+import WorkSection from "../components/organism/WorkSection";
+import AboutSection from "../components/organism/AboutSection";
+import ContactSection from "../components/organism/ContactSection";
+import Footer from "../components/molecules/Footer/";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout home>
-        <Hero />
+        <HeroSection />
         <WorkSection />
         <AboutSection />
         <ContactSection />

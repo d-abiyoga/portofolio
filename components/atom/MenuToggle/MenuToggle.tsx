@@ -1,7 +1,8 @@
 import { MouseEventHandler, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import styles from "./MenuToggle.module.scss";
+import styled from "styled-components";
+import breakpoints from "../../../styles/breakpoints";
 
 interface MenuToggleProps {
   ariaControls: string;
@@ -20,11 +21,11 @@ export const MenuToggle = ({
     setIsExpanded((prevState) => !prevState);
   };
   return (
-    <button
+    <Button
       id="mobile-nav-toggle"
-      className={styles.button}
       aria-controls={ariaControls}
       aria-haspopup="true"
+      aria-expanded={isExpanded}
       onClick={(e) => handleClick(e)}
     >
       <span className="sr-only">Menu</span>
@@ -41,6 +42,17 @@ export const MenuToggle = ({
           aria-label="Close navigation menu"
         />
       )}
-    </button>
+    </Button>
   );
 };
+
+const Button = styled.button`
+  border: none;
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+
+  @media only screen and (min-width: ${breakpoints.sm}) {
+    display: none;
+  }
+`;

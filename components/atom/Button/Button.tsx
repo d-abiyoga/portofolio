@@ -1,5 +1,6 @@
 import { FC, HTMLAttributes, MouseEventHandler } from "react";
 import styled from "styled-components";
+import colors from "../../../styles/colors";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   handleClick?: MouseEventHandler;
@@ -18,6 +19,7 @@ export const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   padding-inline: 1rem;
   box-sizing: border-box;
+  width: fit-content;
 
   padding: 0.5rem 1rem;
 
@@ -26,4 +28,12 @@ export const StyledButton = styled.button<ButtonProps>`
   background-color: ${(props) =>
     props.variant == "primary" ? "teal" : "transparent"};
   color: ${(props) => (props.variant == "primary" ? "white" : "teal")};
+
+  &:hover {
+    transform: translateY(-8%);
+    background-color: ${(props) =>
+      props.variant == "primary" ? colors.primary.main : "transparent"};
+    color: ${(props) => props.variant == "secondary" && colors.primary.main};
+  }
+  transition: 250ms ease-in-out;
 `;

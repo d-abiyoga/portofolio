@@ -1,5 +1,5 @@
+import styled from "styled-components";
 import Nav from "../Nav/";
-import classes from "./Layout.module.scss";
 
 export const Layout = ({
   children,
@@ -13,9 +13,17 @@ export const Layout = ({
       {home && (
         <div>
           <Nav />
-          <main className={classes.main}>{children}</main>
+          <Main>{children}</Main>
         </div>
       )}
     </div>
   );
 };
+
+const Main = styled.main`
+  /* padding: 0 clamp(1rem, 12%, 20rem); */
+
+  /* & > * {
+    max-width: 1200px;
+  } */
+`;

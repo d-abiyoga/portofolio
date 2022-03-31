@@ -1,7 +1,7 @@
+import styled from "styled-components";
+import pagePadding from "../../../styles/utils/pagePadding.styled";
 import { Heading } from "../../atom/Heading/Heading";
-import Section from "../../atom/Section";
-import WorkItem from "../../atom/WorkItem";
-import styles from "./WorkSection.module.scss";
+import WorkItem from "../../molecules/WorkItem";
 
 interface IWorkData {
   title: string;
@@ -12,6 +12,7 @@ interface IWorkData {
   year: number;
   link: string;
   repo?: string;
+  imgPath?: string;
 }
 
 export const WorkSection = () => {
@@ -42,6 +43,7 @@ export const WorkSection = () => {
       role: ["Design", "Frontend", "Backend"],
       year: 2022,
       link: "/work/fleet-management",
+      imgPath: "../../../public/img/idx-stock-app-desktop.png",
     },
     {
       title: "Ecommerce product page",
@@ -66,9 +68,9 @@ export const WorkSection = () => {
   ];
 
   return (
-    <Section id="work">
+    <SectionWrapper id="work">
       <Heading level={2}>Works</Heading>
-      <ul className={styles.projectList}>
+      <ProjectList>
         {workData.map((work, index) => (
           <li key={index}>
             <WorkItem
@@ -84,7 +86,19 @@ export const WorkSection = () => {
             />
           </li>
         ))}
-      </ul>
-    </Section>
+      </ProjectList>
+    </SectionWrapper>
   );
 };
+
+const SectionWrapper = styled.section`
+  ${pagePadding};
+  min-height: 100vh;
+  padding-top: 5rem;
+`;
+
+const ProjectList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;

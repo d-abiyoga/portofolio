@@ -19,7 +19,7 @@ export const GlobalStyle = styled.createGlobalStyle`
 
   * {
     font-family: "Poppins", sans-serif;
-    box-: border-box;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     list-style: none;
