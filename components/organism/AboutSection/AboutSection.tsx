@@ -33,11 +33,6 @@ export const AboutSection = () => {
         TypeScript and NodeJS. I love make things and learn how web technologies
         work.
       </Text>
-      <Text>
-        I am a self-taught Fullstack Developer focused on JavaScript /
-        TypeScript and NodeJS. I love make things and learn how web technologies
-        work.
-      </Text>
       <Article>
         <h3>Skills & Tools</h3>
         <StyledUl>

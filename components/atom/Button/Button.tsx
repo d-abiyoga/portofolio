@@ -5,6 +5,7 @@ import colors from "../../../styles/colors";
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   handleClick?: MouseEventHandler;
   variant: "primary" | "secondary";
+  withIcon?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({ handleClick, variant, ...props }) => {
@@ -36,4 +37,9 @@ export const StyledButton = styled.button<ButtonProps>`
     color: ${(props) => props.variant == "secondary" && colors.primary.main};
   }
   transition: 250ms ease-in-out;
+
+  /* withIcon == true */
+  display: ${({ withIcon }) => withIcon && "flex"};
+  align-items: ${({ withIcon }) => withIcon && "center"};
+  gap: ${({ withIcon }) => withIcon && "0.5rem"};
 `;

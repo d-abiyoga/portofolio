@@ -2,17 +2,20 @@ import styled from "styled-components";
 import ButtonLink from "../../atom/ButtonLink";
 import SocialLink from "../../atom/SocialLink";
 import { FaGithub } from "react-icons/fa";
-import { SiFrontendmentor } from "react-icons/si";
+import { SiFrontendmentor, SiLinkedin } from "react-icons/si";
 import colors from "../../../styles/colors";
 import pagePadding from "../../../styles/utils/pagePadding.styled";
+import { AiOutlineMail } from "react-icons/ai";
 
 export const ContactSection = () => {
   return (
     <SectionWrapper id="contact">
       <h2 className={"sr-only"}>Contact Me</h2>
+      <p>I&apos;m open to freelance work</p>
       <p style={{ fontSize: "4rem" }}>Let&apos;s work together</p>
-      <ButtonLink href="mailto:dimas.abiyoga169@gmail.com">
-        mail to: dimas.abiyoga169@gmail.com
+      <ButtonLink href="mailto:dimas.abiyoga169@gmail.com" withIcon>
+        <AiOutlineMail />
+        <span>dimas.abiyoga169@gmail.com</span>
       </ButtonLink>
       <SocialLinkGroup>
         <SocialLink href="https://github.com/d-abiyoga">
@@ -20,6 +23,9 @@ export const ContactSection = () => {
         </SocialLink>
         <SocialLink href="https://www.frontendmentor.io/profile/d-abiyoga">
           <SiFrontendmentor size={32} />
+        </SocialLink>
+        <SocialLink href="https://www.linkedin.com/in/dimas-abiyoga-48555796/">
+          <SiLinkedin size={32} />
         </SocialLink>
       </SocialLinkGroup>
     </SectionWrapper>
@@ -47,6 +53,17 @@ const SectionWrapper = styled.section`
     left: 0;
     background-color: ${colors.dark.lighter};
     transform: skewY(-5deg);
+  }
+
+  animation: fadeIn 2s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 

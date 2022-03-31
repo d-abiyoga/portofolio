@@ -61,6 +61,16 @@ const SectionWrapper = styled.section`
     justify-content: space-between;
     gap: 2rem;
   }
+
+  animation: fadeIn 5s;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const H1 = styled.h1`
@@ -75,12 +85,6 @@ const H1 = styled.h1`
 
 const EmphasizedText = styled.span`
   color: ${colors.accent.main};
-`;
-
-const FlexCenter = styled.div`
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Description = styled.div`
