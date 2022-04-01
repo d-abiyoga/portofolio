@@ -109,9 +109,6 @@ const LeftDiv = styled.div`
   width: 66%;
 `;
 const RightDiv = styled.div`
-  /* width: 100%; */
-  /* min-width: calc(100vw - 2rem); */
-  /* height: 100%; */
   max-height: 400px;
 `;
 
@@ -154,12 +151,12 @@ const RepoLink = styled.a`
 const Overlay = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   background-color: ${colors.dark.main};
   opacity: 0;
-  z-index: 100;
+  z-index: 10;
   padding: 1rem;
   border-radius: 8px;
 

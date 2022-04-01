@@ -35,7 +35,8 @@ export const ContactSection = () => {
 const SectionWrapper = styled.section`
   ${pagePadding};
   position: relative;
-  min-height: calc(100vh - 4rem);
+  min-height: fit-content;
+  height: calc(100vh - 4rem);
   padding-top: 5rem;
   justify-content: center;
   display: flex;

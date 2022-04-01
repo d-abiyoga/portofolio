@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Nav from "../Nav/";
+import Navbar from "../Navbar";
 
 export const Layout = ({
   children,
@@ -12,7 +12,7 @@ export const Layout = ({
     <div className="container">
       {home && (
         <div>
-          <Nav />
+          <Navbar />
           <Main>{children}</Main>
         </div>
       )}
@@ -21,6 +21,7 @@ export const Layout = ({
 };
 
 const Main = styled.main`
+  z-index: 5;
   /* padding: 0 clamp(1rem, 12%, 20rem); */
 
   /* & > * {

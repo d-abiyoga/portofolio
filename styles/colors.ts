@@ -14,7 +14,7 @@ const colors = {
     main: "#e2e8f0",
     darker: "#cbd5e0",
   },
-  dark: { lighter: "#2c2940", main: "#191724;" },
+  dark: { lighter: "#2c2940", main: "#191724" },
 };
 
 export default colors;

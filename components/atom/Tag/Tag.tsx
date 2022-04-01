@@ -12,4 +12,6 @@ const StyledTag = styled.span`
   padding: 0.2rem 0.75rem;
   margin: 0.2rem;
   border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
 `;

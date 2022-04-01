@@ -30,7 +30,8 @@ export const StyledButton = styled.button<ButtonProps>`
     props.variant == "primary" ? "teal" : "transparent"};
   color: ${(props) => (props.variant == "primary" ? "white" : "teal")};
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: translateY(-8%);
     background-color: ${(props) =>
       props.variant == "primary" ? colors.primary.main : "transparent"};
