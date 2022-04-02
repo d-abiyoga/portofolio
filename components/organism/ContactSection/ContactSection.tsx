@@ -52,7 +52,7 @@ const SectionWrapper = styled.section`
     content: "";
     position: absolute;
     width: 100%;
-    height: calc(100% - 15rem);
+    height: 75%;
     z-index: -1;
     top: 8rem;
     left: 0;

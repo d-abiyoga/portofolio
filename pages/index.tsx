@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import HeroSection from "../components/organism/HeroSection";
-import Layout from "../components/molecules/Layout";
 import WorkSection from "../components/organism/WorkSection";
 import AboutSection from "../components/organism/AboutSection";
 import ContactSection from "../components/organism/ContactSection";
 import Footer from "../components/molecules/Footer/";
+import styled from "styled-components";
+import Navbar from "../components/molecules/Navbar";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <html lang="en" />
         <title>Dimas | Front End Developer</title>
         <meta
           name="description"
@@ -19,16 +19,22 @@ const Home: NextPage = () => {
         />
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Layout home>
+      <Navbar />
+      <Main>
         <HeroSection />
         <WorkSection />
         <AboutSection />
         <ContactSection />
-        <Footer />
-      </Layout>
+      </Main>
+      <Footer />
     </>
   );
 };
 
 export default Home;
+
+const Main = styled.main`
+  z-index: 5;
+`;

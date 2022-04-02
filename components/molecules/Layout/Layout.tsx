@@ -11,10 +11,10 @@ export const Layout = ({
   return (
     <div className="container">
       {home && (
-        <div>
+        <>
           <Navbar />
           <Main>{children}</Main>
-        </div>
+        </>
       )}
     </div>
   );
@@ -22,9 +22,4 @@ export const Layout = ({
 
 const Main = styled.main`
   z-index: 5;
-  /* padding: 0 clamp(1rem, 12%, 20rem); */
-
-  /* & > * {
-    max-width: 1200px;
-  } */
 `;

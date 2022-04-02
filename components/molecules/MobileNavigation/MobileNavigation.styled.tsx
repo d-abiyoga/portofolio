@@ -9,6 +9,7 @@ export const Background = styled.div`
   right: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background: ${colors.dark.lighter};
 
   @media only screen and (min-width: ${breakpoints.md}) {

@@ -39,10 +39,10 @@ export const HeroSection = () => {
 const SectionWrapper = styled.section`
   ${pagePadding}
   min-height: 100vh;
+  width: 100vw;
   padding-top: 5rem;
 
   display: flex;
-  flex-wrap: wrap;
   padding-bottom: 5rem;
   flex-direction: column;
   align-items: center;
