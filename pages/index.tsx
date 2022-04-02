@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Dimas | Front End Developer</title>
+        <title>Dimas | Full Stack Developer</title>
         <meta
           name="description"
           content="Personal portofolio of Dimas Abiyoga"
@@ -37,4 +37,5 @@ export default Home;
 
 const Main = styled.main`
   z-index: 5;
+  overflow-x: hidden;
 `;
