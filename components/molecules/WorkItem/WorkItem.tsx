@@ -106,11 +106,12 @@ const Wrapper = styled.div`
 
 const LeftDiv = styled.div`
   padding: 1rem 0 1rem 1rem;
-  width: 66%;
+  width: 100%;
 `;
-const RightDiv = styled.div`
+
+/* const RightDiv = styled.div`
   max-height: 400px;
-`;
+`; */
 
 const H3 = styled.h3`
   font-size: 1.75rem;

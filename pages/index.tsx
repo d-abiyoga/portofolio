@@ -18,8 +18,8 @@ const Home: NextPage = () => {
           content="Personal portofolio of Dimas Abiyoga"
         />
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Navbar />
       <Main>
