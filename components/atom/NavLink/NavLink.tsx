@@ -8,7 +8,11 @@ type Props = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 export const NavLink = (props: Props) => {
   return (
     <List>
-      <Link {...props}></Link>
+      <Link {...props}>
+        <a href={props.href} role="menuitem">
+          {props.children}
+        </a>
+      </Link>
     </List>
   );
 };

@@ -49,7 +49,7 @@ export const MobileNavigation: FC = () => {
   }, [isOpen]);
 
   return (
-    <FocusTrap>
+    <FocusTrap active={isOpen}>
       <Nav
         as={motion.nav}
         initial={false}

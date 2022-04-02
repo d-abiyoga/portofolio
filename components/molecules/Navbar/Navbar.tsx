@@ -27,7 +27,7 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
 
   background-color: ${colors.dark.main};
-  padding: 0 clamp(1rem, 12%, 10rem);
+  padding: 0 clamp(1rem, 12%, 20rem);
 
   position: fixed;
   box-shadow: ${colors.primary.main} 0px 1px 20px -8px;

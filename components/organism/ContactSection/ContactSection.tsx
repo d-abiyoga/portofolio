@@ -6,6 +6,7 @@ import { SiFrontendmentor, SiLinkedin } from "react-icons/si";
 import colors from "../../../styles/colors";
 import pagePadding from "../../../styles/utils/pagePadding.styled";
 import { AiOutlineMail } from "react-icons/ai";
+import SrOnly from "../../atom/SrOnly";
 
 export const ContactSection = () => {
   return (
@@ -20,12 +21,15 @@ export const ContactSection = () => {
       <SocialLinkGroup>
         <SocialLink href="https://github.com/d-abiyoga">
           <FaGithub size={32} />
+          <SrOnly>Link to Github</SrOnly>
         </SocialLink>
         <SocialLink href="https://www.frontendmentor.io/profile/d-abiyoga">
           <SiFrontendmentor size={32} />
+          <SrOnly>Link to Frontendmentor.io profile</SrOnly>
         </SocialLink>
         <SocialLink href="https://www.linkedin.com/in/dimas-abiyoga-48555796/">
           <SiLinkedin size={32} />
+          <SrOnly>Link to LinkedIn</SrOnly>
         </SocialLink>
       </SocialLinkGroup>
     </SectionWrapper>

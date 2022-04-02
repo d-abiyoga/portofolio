@@ -47,6 +47,7 @@ export const MobileNavLink: FC<Props> = (props) => {
             scale: 1.2,
             backgroundColor: colors.dark.main,
           }}
+          role="menuitem"
         >
           {props.label}
         </A>

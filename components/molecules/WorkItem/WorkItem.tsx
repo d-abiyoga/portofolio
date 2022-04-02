@@ -63,9 +63,9 @@ export const WorkItem = (props: Props) => {
             </Link>
           )}
         </LeftDiv>
-        <RightDiv>
+        {/* <RightDiv>
           <Image src={workImg} layout="responsive"></Image>
-        </RightDiv>
+        </RightDiv> */}
 
         <Overlay>
           <Header>

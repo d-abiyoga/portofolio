@@ -11,11 +11,13 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <html lang="en" />
         <title>Dimas | Front End Developer</title>
         <meta
           name="description"
           content="Personal portofolio of Dimas Abiyoga"
         />
+        <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout home>
