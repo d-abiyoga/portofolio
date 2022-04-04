@@ -1,14 +1,15 @@
 import * as styled from "styled-components";
+import { backgroundColor, textColor } from "./theme";
 
 export const GlobalStyle = styled.createGlobalStyle`
-
   html,
   body {
-    padding: 0
+    padding: 0;
     margin: 0;
-    background-color: #191724;
-    color: #fff;
+    background-color: ${backgroundColor};
+    color: ${textColor};
     scroll-behavior: smooth;
+    /* overflow: visible; */
   }
 
   a {

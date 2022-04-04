@@ -1,6 +1,7 @@
 import Link, { LinkProps } from "next/link";
 import { AnchorHTMLAttributes } from "react";
 import styled from "styled-components";
+import { hoverColor } from "../../../styles/theme";
 
 type LinkPropType = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 
@@ -27,6 +28,7 @@ export const StyledA = styled.a`
 
   &:hover {
     color: #ffffff;
+    color: ${hoverColor};
   }
 
   &:focus {

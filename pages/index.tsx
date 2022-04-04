@@ -7,6 +7,8 @@ import ContactSection from "../components/organism/ContactSection";
 import Footer from "../components/molecules/Footer/";
 import styled from "styled-components";
 import Navbar from "../components/molecules/Navbar";
+import pagePadding from "../styles/utils/pagePadding.styled";
+import { MaxWidthWrapper } from "../components/atom/MaxWidthWrapper/MaxWidthWrapper";
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +23,9 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <MaxWidthWrapper>
+        <Navbar />
+      </MaxWidthWrapper>
       <Main>
         <HeroSection />
         <WorkSection />
@@ -37,5 +41,7 @@ export default Home;
 
 const Main = styled.main`
   z-index: 5;
-  overflow-x: hidden;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 `;

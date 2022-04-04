@@ -1,0 +1,78 @@
+[
+  {
+    "title": "IDX Stock App",
+    "description": "Web app to help Indonesian Investor do calculations",
+    "technology": [
+      "react",
+      "styled-component",
+      "storybook",
+      "express",
+      "mongodb"
+    ],
+    "type": "personal project",
+    "role": [
+      "Design",
+      "Frontend",
+      "Backend"
+    ],
+    "year": 2022,
+    "imgPath": "/img/idx-stock-app-desktop.png",
+    "link": "/work/idx-stock-app",
+    "repo": "https://github.com/d-abiyoga/idx-stock-app",
+    "liveDemoLink": "https://idx-stock-app.netlify.app/"
+  },
+  {
+    "title": "Gasoline filling tracker",
+    "description": "Web app to report and record gasoline filling for each driver",
+    "technology": [
+      "React",
+      "Chakra UI",
+      "Express",
+      "mongodb"
+    ],
+    "type": "client work",
+    "role": [
+      "Design",
+      "Frontend",
+      "Backend"
+    ],
+    "year": 2022,
+    "imgPath": "/img/idx-stock-app-desktop.png",
+    "link": "/work/fleet-management"
+  },
+  {
+    "title": "Ecommerce product page",
+    "description": "Responsive ecommerce page that have feature such as carousel and functional cart.",
+    "technology": [
+      "React",
+      "SCSS",
+      "Express"
+    ],
+    "type": "coding challenge",
+    "role": [
+      "Frontend"
+    ],
+    "year": 2021,
+    "imgPath": "/img/ecommerce-product-page-desktop.png",
+    "link": "/work/ecommerce-product-page",
+    "repo": "https://github.com/d-abiyoga/frontendmentor-challenge/tree/main/ecommerce-product-page-main",
+    "liveDemoLink": "https://ecommerce-product-page-d-abiyoga.netlify.app/"
+  },
+  {
+    "title": "Space Travel Website",
+    "description": "Responsive website which is part of frontendmentor.io challenge",
+    "technology": [
+      "HTML",
+      "SCSS"
+    ],
+    "type": "coding challenge",
+    "role": [
+      "Frontend"
+    ],
+    "year": 2021,
+    "imgPath": "/img/space-tourism-website-desktop.png",
+    "link": "/work/space-travel-website",
+    "repo": "https://github.com/d-abiyoga/frontendmentor-challenge/tree/main/ecommerce-product-page-main",
+    "liveDemoLink": "https://space-travel-web-d-abiyoga.netlify.app/"
+  }
+]

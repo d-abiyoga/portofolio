@@ -5,6 +5,8 @@ import styled from "styled-components";
 import colors from "../../../styles/colors";
 import breakpoints from "../../../styles/breakpoints";
 import pagePadding from "../../../styles/utils/pagePadding.styled";
+import DarkModeToggle from "../../atom/DarkModeToggle";
+import { backgroundColor } from "../../../styles/theme";
 
 export const Navbar = () => {
   return (
@@ -12,6 +14,7 @@ export const Navbar = () => {
       <Link href="/" passHref>
         <Logo> Dimas.dev</Logo>
       </Link>
+      <DarkModeToggle />
       <MobileNavigation />
       <DesktopNavigation />
     </StyledHeader>
@@ -19,29 +22,29 @@ export const Navbar = () => {
 };
 
 export const StyledHeader = styled.header`
-  ${pagePadding};
+  /* ${pagePadding}; */
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 
   z-index: 100;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background-color: ${colors.dark.main};
-
-  position: fixed;
+  background-color: ${backgroundColor}
   box-shadow: ${colors.primary.main} 0px 1px 20px -8px;
 
-  & > * {
+  /* & > * {
     max-width: 1200px;
-  }
+  } */
 `;
 
 export const Logo = styled.div`
   font-size: 1.75rem;
-  color: white;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;

@@ -2,6 +2,7 @@ import Link, { LinkProps } from "next/link";
 import { AnchorHTMLAttributes } from "react";
 import styled from "styled-components";
 import colors from "../../../styles/colors";
+import { hoverColor, inactiveColor } from "../../../styles/theme";
 
 type Props = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 
@@ -22,19 +23,19 @@ const List = styled.li`
   a {
     text-decoration: none;
     font-size: 1.25rem;
-    color: ${colors.grey.darker};
+    color: ${inactiveColor};
     position: relative;
 
     &:hover,
     &:active {
-      color: ${colors.white.main};
+      color: ${hoverColor};
     }
     /* Animation */
     &::after {
       content: "";
       width: 0;
-      height: 2px;
-      background-color: ${colors.white.main};
+      height: 3px;
+      background-color: ${colors.primary.main};
       position: absolute;
       bottom: -0.2em;
       left: 0;

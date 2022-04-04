@@ -7,6 +7,7 @@ import colors from "../../../styles/colors";
 import pagePadding from "../../../styles/utils/pagePadding.styled";
 import { AiOutlineMail } from "react-icons/ai";
 import SrOnly from "../../atom/SrOnly";
+import theme from "styled-theming";
 
 export const ContactSection = () => {
   return (
@@ -36,28 +37,34 @@ export const ContactSection = () => {
   );
 };
 
+const contactSectionBackground = theme("mode", {
+  light: colors.light.darker,
+  dark: colors.dark.lighter,
+});
+
 const SectionWrapper = styled.section`
   ${pagePadding};
   position: relative;
   min-height: fit-content;
   height: calc(100vh - 4rem);
-  padding-top: 5rem;
   justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   z-index: 0;
+  overflow: visible;
 
   &::before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 200%;
     height: 75%;
     z-index: -1;
     top: 8rem;
-    left: 0;
-    background-color: ${colors.dark.lighter};
-    transform: skewY(-5deg);
+    left: -50%;
+    background-color: ${contactSectionBackground};
+    /* transform: skewY(-5deg); */
+    overflow: show;
   }
 
   animation: fadeIn 2s;

@@ -24,6 +24,10 @@ export const Nav = styled.nav`
   right: 0;
   bottom: 0;
   width: 100vw;
+
+  @media only screen and (min-width: ${breakpoints.sm}) {
+    display: none;
+  }
 `;
 
 export const NavUl = styled.ul`

@@ -66,7 +66,7 @@ const SectionWrapper = styled.section`
   ${stack};
   ${pagePadding};
 
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding-top: 5rem;
 `;
 

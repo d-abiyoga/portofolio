@@ -2,168 +2,116 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "../../atom/Tag";
 import Text from "../../atom/Text";
-import workImg from "../../../public/img/idx-stock-app-desktop.png";
-import styled from "styled-components";
 import colors from "../../../styles/colors";
+import { motion } from "framer-motion";
+import { FaArrowRight, FaCode, FaExternalLinkAlt } from "react-icons/fa";
+import SrOnly from "../../atom/SrOnly";
+import Heading from "../../atom/Heading";
+import {
+  A,
+  Header,
+  InfoDiv,
+  LeftDiv,
+  Links,
+  ProjectInfo,
+  RightDiv,
+  Tags,
+  TextLink,
+  Wrapper,
+  Year,
+} from "./WorkItem.styled";
 
 interface Props {
   projectNumber: number;
   title: string;
   description: string;
   technology: string[];
-  type: "client work" | "personal project" | "coding challenge";
+  type: string;
   role: string[];
   year: number;
   link: string;
   repo?: string;
-  imgPath?: string;
+  imgPath: string;
+  liveDemoLink?: string;
 }
 
 export const WorkItem = (props: Props) => {
   return (
-    <Link href={props.link} passHref>
-      <Wrapper>
-        <LeftDiv>
+    <Wrapper>
+      <InViewAnimation />
+
+      <LeftDiv>
+        <Image
+          src={props.imgPath}
+          objectFit="cover"
+          objectPosition="top center"
+          layout="fill"
+        ></Image>
+      </LeftDiv>
+      <RightDiv as={motion.div} whileHover={{ scale: 0.95 }}>
+        <ProjectInfo id="project-info">
           <Header>
-            <ProjectNumber>
-              {props.projectNumber < 10
-                ? `0${props.projectNumber + 1}`
-                : `${props.projectNumber + 1}`}
-            </ProjectNumber>
-            <H3>{props.title}</H3>
+            <Heading level={3}>{props.title}</Heading>
+            <Year>{props.year}</Year>
           </Header>
-          <ProjectInfo id="project-info">
-            <div>
-              <h4>Role</h4>
+          <InfoDiv>
+            <p>Role</p>
+            <Tags>
               {props.role.map((item, index) => (
                 <Tag key={item + index}>{item}</Tag>
               ))}
-            </div>
-            <div>
-              <Year>{props.year}</Year>
-            </div>
-          </ProjectInfo>
-
-          <Text>{props.description}</Text>
-          <a
-            href={props.link}
-            style={{
-              display: "block",
-              fontWeight: "700",
-              fontSize: "1.2rem",
-            }}
-          >
-            See detail
-          </a>
-          {props.repo && (
-            <Link href={props.repo} passHref>
-              <RepoLink target="_blank" rel="noreferrer" href={props.repo}>
-                Repo
-              </RepoLink>
+            </Tags>
+          </InfoDiv>
+          <InfoDiv>
+            <p>Tech</p>
+            <Tags>
+              {props.technology.map((item, index) => (
+                <Tag key={item + index}>{item}</Tag>
+              ))}
+            </Tags>
+          </InfoDiv>
+        </ProjectInfo>
+        <Text>{props.description}</Text>
+        <Links>
+          {props.liveDemoLink && (
+            <Link href={props.liveDemoLink} passHref>
+              <A target="_blank" rel="noreferrer" href={props.repo}>
+                <FaExternalLinkAlt size={20} fill={colors.primary.main} />
+                <SrOnly>Go to live demo</SrOnly>
+              </A>
             </Link>
           )}
-        </LeftDiv>
-        {/* <RightDiv>
-          <Image src={workImg} layout="responsive"></Image>
-        </RightDiv> */}
-
-        <Overlay>
-          <Header>
-            <ProjectNumber>
-              {props.projectNumber < 10
-                ? `0${props.projectNumber + 1}`
-                : `${props.projectNumber + 1}`}
-            </ProjectNumber>
-            <H3>{props.title}</H3>
-          </Header>
-          <div>
-            <h4>Technology</h4>
-            {props.technology.map((item, index) => (
-              <Tag key={item + index}>{item}</Tag>
-            ))}
-          </div>
-        </Overlay>
-      </Wrapper>
-    </Link>
+          {props.repo && (
+            <Link href={props.repo} passHref>
+              <A target="_blank" rel="noreferrer" href={props.repo}>
+                <FaCode size={20} fill={colors.primary.main} />
+                <SrOnly>Go to source code</SrOnly>
+              </A>
+            </Link>
+          )}
+          <TextLink href={props.link} as={motion.a} whileHover={{ scale: 1.1 }}>
+            Learn more
+            <FaArrowRight size={14} />
+          </TextLink>
+        </Links>
+      </RightDiv>
+    </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
-  position: relative;
-  border: 1px solid ${colors.primary.main};
-  border-radius: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: ${colors.primary.main} 0px 1px 20px -6px;
-  }
-`;
-
-const LeftDiv = styled.div`
-  padding: 1rem 0 1rem 1rem;
-  width: 100%;
-`;
-
-/* const RightDiv = styled.div`
-  max-height: 400px;
-`; */
-
-const H3 = styled.h3`
-  font-size: 1.75rem;
-`;
-
-const ProjectNumber = styled.p`
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: ${colors.primary.main};
-`;
-
-const Header = styled.p`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`;
-
-const ProjectInfo = styled.p`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1rem;
-`;
-
-const Year = styled.p`
-  font-weight: 700;
-`;
-
-const RepoLink = styled.a`
-  z-index: 2;
-
-  &:hover {
-    color: $primary;
-    transform: scale(1.1);
-  }
-`;
-
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: ${colors.dark.main};
-  opacity: 0;
-  z-index: 10;
-  padding: 1rem;
-  border-radius: 8px;
-
-  transition: 500ms ease-in-out;
-
-  &:hover {
-    opacity: 1;
-  }
-`;
+const InViewAnimation = () => (
+  <motion.div
+    style={{
+      background: colors.primary.main,
+      position: "absolute",
+      top: 0,
+      left: 0,
+      height: "100%",
+      zIndex: 1,
+    }}
+    initial={{ width: "100%" }}
+    whileInView={{ width: "0" }}
+    transition={{ type: "tween", delay: 0.3, staggerChildren: 0.1 }}
+    viewport={{ once: true }}
+  />
+);

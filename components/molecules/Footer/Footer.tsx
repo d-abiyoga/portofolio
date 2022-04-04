@@ -9,7 +9,10 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  ${pagePadding};
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
