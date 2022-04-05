@@ -3,11 +3,11 @@
     "title": "IDX Stock App",
     "description": "Web app to help Indonesian Investor do calculations",
     "technology": [
-      "react",
-      "styled-component",
-      "storybook",
-      "express",
-      "mongodb"
+      "React",
+      "Styled-component",
+      "Storybook",
+      "Express",
+      "Mongodb"
     ],
     "type": "personal project",
     "role": [
@@ -22,13 +22,14 @@
     "liveDemoLink": "https://idx-stock-app.netlify.app/"
   },
   {
-    "title": "Gasoline filling tracker",
+    "title": "Fleet Management App",
     "description": "Web app to report and record gasoline filling for each driver",
     "technology": [
       "React",
       "Chakra UI",
       "Express",
-      "mongodb"
+      "Mongodb",
+      "Leafletjs"
     ],
     "type": "client work",
     "role": [
@@ -37,7 +38,7 @@
       "Backend"
     ],
     "year": 2022,
-    "imgPath": "/img/idx-stock-app-desktop.png",
+    "imgPath": "/img/fleet-management-app.png",
     "link": "/work/fleet-management"
   },
   {

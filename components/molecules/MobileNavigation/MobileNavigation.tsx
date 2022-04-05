@@ -2,6 +2,7 @@ import { useWindowSize } from "@react-hook/window-size";
 import FocusTrap from "focus-trap-react";
 import { motion, useCycle } from "framer-motion";
 import { FC, RefObject, useEffect, useRef } from "react";
+import DarkModeToggle from "../../atom/DarkModeToggle";
 import MenuToggle from "../../atom/MenuToggle";
 import MobileNavLink from "../../atom/MobileNavLink";
 import { Background, Nav, NavUl } from "./MobileNavigation.styled";
@@ -57,6 +58,13 @@ export const MobileNavigation: FC = () => {
         custom={width}
         ref={containerRef}
       >
+        <DarkModeToggle
+          style={{
+            position: "absolute",
+            right: "7.5rem",
+            top: "calc(50% - 22px)",
+          }}
+        />
         <Background as={motion.div} variants={sidebar} custom={width} />
         <MenuToggle toggle={() => toggleOpen()} isOpen={isOpen} />
         <NavUl as={motion.ul} variants={ulVariants}>

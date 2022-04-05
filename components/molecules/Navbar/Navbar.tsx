@@ -14,15 +14,16 @@ export const Navbar = () => {
       <Link href="/" passHref>
         <Logo> Dimas.dev</Logo>
       </Link>
-      <DarkModeToggle />
-      <MobileNavigation />
-      <DesktopNavigation />
+      <div>
+        <MobileNavigation />
+        <DesktopNavigation />
+      </div>
     </StyledHeader>
   );
 };
 
 export const StyledHeader = styled.header`
-  /* ${pagePadding}; */
+  ${pagePadding};
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -37,10 +38,6 @@ export const StyledHeader = styled.header`
 
   background-color: ${backgroundColor}
   box-shadow: ${colors.primary.main} 0px 1px 20px -8px;
-
-  /* & > * {
-    max-width: 1200px;
-  } */
 `;
 
 export const Logo = styled.div`

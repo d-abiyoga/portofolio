@@ -7,7 +7,6 @@ import ContactSection from "../components/organism/ContactSection";
 import Footer from "../components/molecules/Footer/";
 import styled from "styled-components";
 import Navbar from "../components/molecules/Navbar";
-import pagePadding from "../styles/utils/pagePadding.styled";
 import { MaxWidthWrapper } from "../components/atom/MaxWidthWrapper/MaxWidthWrapper";
 
 const Home: NextPage = () => {
