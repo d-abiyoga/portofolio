@@ -5,7 +5,6 @@ import Text from "../../atom/Text";
 import colors from "../../../styles/colors";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaCode, FaExternalLinkAlt } from "react-icons/fa";
-import SrOnly from "../../atom/SrOnly";
 import Heading from "../../atom/Heading";
 import {
   A,
@@ -20,6 +19,8 @@ import {
   Wrapper,
   Year,
 } from "./WorkItem.styled";
+import { WorkItemOverlayColor } from "../../../styles/theme";
+import styled from "styled-components";
 
 interface Props {
   projectNumber: number;
@@ -32,6 +33,7 @@ interface Props {
   link: string;
   repo?: string;
   imgPath: string;
+  imgAlt?: string;
   liveDemoLink?: string;
 }
 
@@ -46,6 +48,7 @@ export const WorkItem = (props: Props) => {
           objectFit="cover"
           objectPosition="top center"
           layout="fill"
+          alt={props.imgAlt}
         ></Image>
       </LeftDiv>
       <RightDiv as={motion.div} whileHover={{ scale: 0.95 }}>
@@ -75,40 +78,58 @@ export const WorkItem = (props: Props) => {
         <Links>
           {props.liveDemoLink && (
             <Link href={props.liveDemoLink} passHref>
-              <A target="_blank" rel="noreferrer" href={props.repo}>
-                <FaExternalLinkAlt size={20} fill={colors.primary.main} />
-                <SrOnly>Go to live demo</SrOnly>
+              <A
+                target="_blank"
+                rel="noreferrer"
+                href={props.repo}
+                aria-label="Go to live demo"
+              >
+                <FaExternalLinkAlt
+                  size={20}
+                  fill={colors.primary.main}
+                  aria-hidden="true"
+                />
               </A>
             </Link>
           )}
           {props.repo && (
             <Link href={props.repo} passHref>
-              <A target="_blank" rel="noreferrer" href={props.repo}>
-                <FaCode size={20} fill={colors.primary.main} />
-                <SrOnly>Go to source code</SrOnly>
+              <A
+                target="_blank"
+                rel="noreferrer"
+                href={props.repo}
+                aria-label="Go to source code"
+              >
+                <FaCode
+                  size={20}
+                  fill={colors.primary.main}
+                  aria-hidden="true"
+                />
               </A>
             </Link>
           )}
-          <TextLink href={props.link} as={motion.a} whileHover={{ scale: 1.1 }}>
+          {/* <TextLink href={props.link} as={motion.a} whileHover={{ scale: 1.1 }}>
             Learn more
             <FaArrowRight size={14} />
-          </TextLink>
+          </TextLink> */}
         </Links>
       </RightDiv>
     </Wrapper>
   );
 };
 
+const StyledInViewAnimation = styled.div`
+  background: ${WorkItemOverlayColor};
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 5;
+`;
+
 const InViewAnimation = () => (
-  <motion.div
-    style={{
-      background: colors.primary.main,
-      position: "absolute",
-      top: 0,
-      left: 0,
-      height: "100%",
-      zIndex: 1,
-    }}
+  <StyledInViewAnimation
+    as={motion.div}
     initial={{ width: "100%" }}
     whileInView={{ width: "0" }}
     transition={{ type: "tween", delay: 0.3, staggerChildren: 0.1 }}

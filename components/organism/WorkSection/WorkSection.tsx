@@ -30,6 +30,7 @@ export const WorkSection = () => {
               repo={work.repo}
               liveDemoLink={work.liveDemoLink}
               imgPath={work.imgPath}
+              imgAlt={work.imgAlt}
             />
           </li>
         ))}

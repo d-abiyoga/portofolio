@@ -10,21 +10,19 @@ export const NavLink = (props: Props) => {
   return (
     <List>
       <Link {...props}>
-        <a href={props.href} role="menuitem">
-          {props.children}
-        </a>
+        <a href={props.href}>{props.children}</a>
       </Link>
     </List>
   );
 };
 
 const List = styled.li`
-  margin-left: 3rem;
   a {
     text-decoration: none;
     font-size: 1.25rem;
     color: ${inactiveColor};
     position: relative;
+    padding: 0.25rem 0.5rem;
 
     &:hover,
     &:active {

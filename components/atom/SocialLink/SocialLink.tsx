@@ -8,7 +8,12 @@ type LinkPropType = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 export const SocialLink = (props: LinkPropType) => {
   return (
     <Link href={props.href} passHref>
-      <StyledA target="_blank" rel="noreferrer" href={props.href}>
+      <StyledA
+        target="_blank"
+        rel="noreferrer"
+        href={props.href}
+        aria-label={props["aria-label"]}
+      >
         {props.children}
       </StyledA>
     </Link>

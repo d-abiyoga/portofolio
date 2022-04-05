@@ -34,7 +34,7 @@ export const AboutSection = () => {
         work.
       </Text>
       <Article>
-        <h3>Skills & Tools</h3>
+        <Heading level={3}>Skills & Tools</Heading>
         <StyledUl>
           <SkillList category="Front End">
             <SkillItem name="HTML5" icon={<FaHtml5 />} />

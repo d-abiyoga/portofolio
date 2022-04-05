@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import colors from "../../../styles/colors";
+import { SkillCategoryNameColor } from "../../../styles/theme";
 
 interface Props {
   category: string;
@@ -17,7 +18,7 @@ export const SkillList: FC<Props> = (props) => {
 
 const CategoryName = styled.p`
   font-weight: 700;
-  color: ${colors.accent.main};
+  color: ${SkillCategoryNameColor};
   line-height: 2rem;
 `;
 

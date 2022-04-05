@@ -17,6 +17,7 @@
     ],
     "year": 2022,
     "imgPath": "/img/idx-stock-app-desktop.png",
+    "imgAlt": "A web page filled with two set of stock calculators",
     "link": "/work/idx-stock-app",
     "repo": "https://github.com/d-abiyoga/idx-stock-app",
     "liveDemoLink": "https://idx-stock-app.netlify.app/"
@@ -39,6 +40,7 @@
     ],
     "year": 2022,
     "imgPath": "/img/fleet-management-app.png",
+    "imgAlt": "four representation of the mobile web app in different state",
     "link": "/work/fleet-management"
   },
   {
@@ -55,6 +57,7 @@
     ],
     "year": 2021,
     "imgPath": "/img/ecommerce-product-page-desktop.png",
+    "imgAlt": "ecommerce page showing a shoes as the product",
     "link": "/work/ecommerce-product-page",
     "repo": "https://github.com/d-abiyoga/frontendmentor-challenge/tree/main/ecommerce-product-page-main",
     "liveDemoLink": "https://ecommerce-product-page-d-abiyoga.netlify.app/"
@@ -72,6 +75,7 @@
     ],
     "year": 2021,
     "imgPath": "/img/space-tourism-website-desktop.png",
+    "imgAlt": "website containing picture of earth from space",
     "link": "/work/space-travel-website",
     "repo": "https://github.com/d-abiyoga/frontendmentor-challenge/tree/main/ecommerce-product-page-main",
     "liveDemoLink": "https://space-travel-web-d-abiyoga.netlify.app/"

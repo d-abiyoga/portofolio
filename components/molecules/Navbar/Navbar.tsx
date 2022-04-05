@@ -5,7 +5,6 @@ import styled from "styled-components";
 import colors from "../../../styles/colors";
 import breakpoints from "../../../styles/breakpoints";
 import pagePadding from "../../../styles/utils/pagePadding.styled";
-import DarkModeToggle from "../../atom/DarkModeToggle";
 import { backgroundColor } from "../../../styles/theme";
 
 export const Navbar = () => {

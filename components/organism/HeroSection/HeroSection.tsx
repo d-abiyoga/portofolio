@@ -4,6 +4,7 @@ import styled from "styled-components";
 import breakpoints from "../../../styles/breakpoints";
 import colors from "../../../styles/colors";
 import pagePadding from "../../../styles/utils/pagePadding.styled";
+import { HeroAccentColor } from "../../../styles/theme";
 
 export const HeroSection = () => {
   return (
@@ -83,7 +84,7 @@ const H1 = styled.h1`
 `;
 
 const EmphasizedText = styled.span`
-  color: ${colors.accent.main};
+  color: ${HeroAccentColor};
 `;
 
 const Description = styled.div`

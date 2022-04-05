@@ -32,12 +32,20 @@ const H2 = styled.h2`
   font-size: 2.065rem;
   line-height: 3.315rem;
   font-weight: 700;
+  @media only screen and (max-width: ${breakpoints.sm}) {
+    font-size: 1.85rem;
+    line-height: 2.8rem;
+  }
 `;
 
 const H3 = styled.h3`
   font-size: 1.625rem;
   line-height: 2.625rem;
   font-weight: 700;
+  @media only screen and (max-width: ${breakpoints.sm}) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 `;
 
 const H4 = styled.h4`
@@ -45,4 +53,7 @@ const H4 = styled.h4`
   line-height: 2.0625rem;
   font-weight: 700;
   color: teal;
+  @media only screen and (max-width: ${breakpoints.sm}) {
+    font-size: 1.15rem;
+    line-height: 1.8rem;
 `;

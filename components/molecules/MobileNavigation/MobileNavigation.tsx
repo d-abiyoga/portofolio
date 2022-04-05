@@ -9,7 +9,7 @@ import { Background, Nav, NavUl } from "./MobileNavigation.styled";
 
 const sidebar = {
   open: (width: number) => ({
-    clipPath: `circle(${1000 * 2 + 200}px at ${0.88 * width - 5}px 40px)`,
+    clipPath: `circle(${1000 * 2 + 200}px at ${0.93 * width - 5}px 40px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -17,7 +17,7 @@ const sidebar = {
     },
   }),
   closed: (width: number) => ({
-    clipPath: `circle(0px at ${0.88 * width - 5}px 28px)`,
+    clipPath: `circle(0px at ${0.93 * width - 5}px 28px)`,
     transition: {
       delay: 0.5,
       type: "spring",
@@ -61,7 +61,7 @@ export const MobileNavigation: FC = () => {
         <DarkModeToggle
           style={{
             position: "absolute",
-            right: "7.5rem",
+            right: "clamp(4rem, 18%,7.5rem)",
             top: "calc(50% - 22px)",
           }}
         />

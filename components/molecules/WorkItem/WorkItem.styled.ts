@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import colors from "../../../styles/colors";
 import breakpoints from "../../../styles/breakpoints";
-import { RoleInfoColor } from "../../../styles/theme";
+import { RoleInfoColor, YearColor } from "../../../styles/theme";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  /* min-height: 350px; */
 
   transition: all 0.3s ease-in-out;
   &:hover {
@@ -27,11 +26,6 @@ export const LeftDiv = styled.div`
   min-height: clamp(220px, 80vw, 240px);
   min-width: 100px;
   position: relative;
-
-  /* @media only screen and (min-width: ${breakpoints.sm}) {
-    min-height: 240px;
-    min-width: 300px;
-  } */
 
   @media only screen and (min-width: ${breakpoints.sm}) {
     min-height: clamp(300px, 33vw, 380px);
@@ -59,7 +53,7 @@ export const ProjectInfo = styled.p`
 `;
 
 export const Year = styled.p`
-  color: ${colors.grey.darker};
+  color: ${YearColor};
   line-height: 2rem;
 `;
 

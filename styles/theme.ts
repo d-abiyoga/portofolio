@@ -45,3 +45,23 @@ export const RoleInfoColor = theme("mode", {
   light: colors.primary.main,
   dark: colors.primary.lighter,
 });
+
+export const YearColor = theme("mode", {
+  light: colors.grey.darkest,
+  dark: colors.grey.darker,
+});
+
+export const SkillCategoryNameColor = theme("mode", {
+  light: colors.primary.main,
+  dark: colors.accent.main,
+});
+
+export const HeroAccentColor = theme("mode", {
+  light: colors.accent.darker,
+  dark: colors.accent.main,
+});
+
+export const WorkItemOverlayColor = theme("mode", {
+  light: colors.light.darker,
+  dark: colors.dark.lighter,
+});

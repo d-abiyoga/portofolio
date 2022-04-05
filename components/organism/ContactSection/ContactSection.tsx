@@ -20,16 +20,25 @@ export const ContactSection = () => {
         <span>dimas.abiyoga169@gmail.com</span>
       </ButtonLink>
       <SocialLinkGroup>
-        <SocialLink href="https://github.com/d-abiyoga">
-          <FaGithub size={32} />
+        <SocialLink
+          href="https://github.com/d-abiyoga"
+          aria-label="Go to Dimas's github"
+        >
+          <FaGithub size={32} aria-hidden="true" />
           <SrOnly>Link to Github</SrOnly>
         </SocialLink>
-        <SocialLink href="https://www.frontendmentor.io/profile/d-abiyoga">
-          <SiFrontendmentor size={32} />
+        <SocialLink
+          href="https://www.frontendmentor.io/profile/d-abiyoga"
+          aria-label="Go to Dimas's frontendmentor.io profile"
+        >
+          <SiFrontendmentor size={32} aria-hidden="true" />
           <SrOnly>Link to Frontendmentor.io profile</SrOnly>
         </SocialLink>
-        <SocialLink href="https://www.linkedin.com/in/dimas-abiyoga-48555796/">
-          <SiLinkedin size={32} />
+        <SocialLink
+          href="https://www.linkedin.com/in/dimas-abiyoga-48555796/"
+          aria-label="Go to Dimas's LinkedIn"
+        >
+          <SiLinkedin size={32} aria-hidden="true" />
           <SrOnly>Link to LinkedIn</SrOnly>
         </SocialLink>
       </SocialLinkGroup>

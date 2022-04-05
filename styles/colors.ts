@@ -5,6 +5,8 @@ const colors = {
   },
   accent: {
     main: "#f6c17a",
+    darker: "#56949f",
+    darkest: "#b4637a",
   },
   white: {
     main: "#fff",

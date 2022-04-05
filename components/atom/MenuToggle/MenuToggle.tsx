@@ -75,7 +75,7 @@ const Button = styled.button`
   position: absolute;
 
   top: calc(50% - 22px);
-  right: calc(clamp(1rem, 12%, 10rem) - 10px);
+  right: calc(clamp(1rem, 7%, 4rem) - 10px);
   width: 50px;
   height: 50px;
   z-index: 201;

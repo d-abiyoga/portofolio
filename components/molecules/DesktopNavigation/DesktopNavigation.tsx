@@ -5,20 +5,26 @@ import NavLink from "../../atom/NavLink";
 
 export const DesktopNavigation = () => {
   return (
-    <nav>
+    <Nav>
+      <DarkModeToggle />
       <Ul>
-        <DarkModeToggle />
         <NavLink href="#work">Work</NavLink>
         <NavLink href="#about">About</NavLink>
         <NavLink href="#contact">Contact</NavLink>
       </Ul>
-    </nav>
+    </Nav>
   );
 };
-const Ul = styled.ul`
+
+const Nav = styled.nav`
   display: flex;
-  align-items: baseline;
+  gap: 1rem;
   @media screen and (max-width: ${breakpoints.sm}) {
     display: none;
   }
+`;
+const Ul = styled.ul`
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
 `;
